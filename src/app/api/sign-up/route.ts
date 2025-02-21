@@ -1,15 +1,10 @@
 // outsource dependencies
-import sgMail from '@sendgrid/mail';
 import { NextResponse } from 'next/server';
 
 // local dependencies
 import { prepareSignUpEmailConfig, sendEmail } from '@/services/sendgrid';
 
-if (process.env.SENDGRID_API_KEY) {
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-}
-
-export async function POST(request: NextResponse) {
+export async function POST(request: Request) {
   const { email, password } = await request.json();
 
   if (!email || !password) {
