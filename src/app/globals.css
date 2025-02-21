@@ -2,20 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../../public/stars.svg'), linear-gradient(135deg, #F4F9FF 0%, #E0EDFB 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 100% 100%;
 }
