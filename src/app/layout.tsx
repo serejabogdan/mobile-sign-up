@@ -9,12 +9,18 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Sign up',
-  description: 'Sign up page',
+  title: 'Home',
+  description: 'Home sweet home',
 };
 
 export default function RootLayout({ children }: Readonly<{children: ReactNode;}>) {
   return <html lang="en">
-    <body className={inter.className}> { children } </body>
+    <body className={inter.className}>
+      <main>
+        <div className="min-h-screen flex flex-col items-center justify-center p-4">
+          { children }
+        </div>
+      </main>
+    </body>
   </html>;
 }

@@ -6,6 +6,19 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: { },
+  theme: {
+    extend: {
+      colors: {
+        error: {
+          light: '#FDEFEE',
+          DEFAULT: '#FF8080'
+        },
+        success: '#27B274',
+        blue: {
+          muted: '#6F91BC'
+        }
+      }
+    }
+  },
   plugins: [],
 } satisfies Config;
